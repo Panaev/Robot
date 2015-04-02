@@ -18,9 +18,8 @@ namespace RobotDevelopment
 	  
 	  public Node OtherNode(Node node)
 	  {
-		  if (!IsIncident(node)) throw new ArgumentException();
 		  if (From == node) return To;
 		  return From;
-    }
+	  }
   }
 }
