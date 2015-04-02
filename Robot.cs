@@ -12,4 +12,9 @@ namespace RobotDevelopment
 		itemY = 
 		//надо потом еще подключить один класс кдругому
 	}
+	
+	public void CreateGraph()
+	{
+		
+	}
 }
