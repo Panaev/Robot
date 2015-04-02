@@ -1,7 +1,7 @@
-class Program
+namespace RobotDevelopment
 {
-	public static void Main()
+	class Robot
 	{
-		//немного кода... сдесь был дима
+		//тут я предлагаю писать робота О_О
 	}
 }
