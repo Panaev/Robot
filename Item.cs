@@ -1,10 +1,5 @@
 namespace RobotDevelopment
 {
-	class Robot
-	{
-		//тут я предлагаю писать робота О_О
-	}
-	
 	public class Item //донт рипит йорселф говорите? :)
     {
         public double X;
@@ -58,9 +53,4 @@ namespace RobotDevelopment
             }
         }
     }
-	
-	public void CreateGraph()
-	{
-		
-	}
 }
