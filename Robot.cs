@@ -2,6 +2,6 @@ class Program
 {
 	public static void Main()
 	{
-		//немного кода...
+		//немного кода... сдесь был дима
 	}
 }
