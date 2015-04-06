@@ -2,21 +2,22 @@ namespace RobotDevelopment
 {
   public class Program
   {
-    var mainloop = True;
+    var server = new CvarcClient(args, Settings).GetServer<PositionSensorsData>();
+		var helloPackageAns = server.Run();
+    var mainloop = true;
     Robot robot = new Robot();
     while (mainloop)// робот работает в "вечном" цикле
     {
       Graph map = new Graph();// создаётся карта - каждый раз по новой, запихивается в граф
       // затем находим деталь, которая находится ближе всего
-      // и формируем deltaX, deltaY и alpha - необходимое изменение координаты робота
-      // и угол, на который ему следует повернуть
+      // и формируем alpha - угол, на который ему следует повернуть
       // З.Ы. надо обходить препятствия...
       // З.З.Ы. по идее, надо делать это эффективно...
-      double x = ...;
-      double y = ...;
       double alpha = ...;
-      robot.GoTo(x, y);
       robot.Rotate(alpha);
+      robot.Go();
+      // mainloop становится false, когда на карте нет необходимого объекта
     }
+    server.Exit()
   }
 }
