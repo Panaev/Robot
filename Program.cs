@@ -1,6 +1,6 @@
 namespace RobotDevelopment
 {
-  public static class Program
+  public class Program
   {
     var mainloop = True;
     Robot robot = new Robot();
