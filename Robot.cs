@@ -5,14 +5,16 @@ namespace RobotDevelopment
     public Pos { get { return Position; } } // как это пишется, поправьте меня
     public DetailsInfo { get { return DetailsInfo; } }
     
-    public GoBy(double deltaX, double deltaY)
+    public Go()
     {
-      // робот изменяет свою координату
+      // робот едет
+      sensorsData = server.SendCommand(new Command { LinearVelocity = 50, Time = 1 });
     }
     
-    public Rotate(double alpha) // или он не принимает угол...
+    public Rotate(double alpha) // или он принимает не угол...
     {
       // поворот робота
+      sensorsData = server.SendCommand(new Command { AngularVelocity = Angle.FromGrad(alpha), Time = 1 });
     }
   }
 }
