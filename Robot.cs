@@ -2,16 +2,17 @@ namespace RobotDevelopment
 {
   public class Robot
   {
-    public Pos { get { return Position; } } //как это пишется, поправьте меня
+    public Pos { get { return Position; } } // как это пишется, поправьте меня
+    public DetailsInfo { get { return DetailsInfo; } }
     
-    public GoTo(double deltaX, double deltaY)
+    public GoBy(double deltaX, double deltaY)
     {
-      //Робот изменяет свою координату
+      // робот изменяет свою координату
     }
     
-    public Rotate(double alpha) //или он не принимает угол...
+    public Rotate(double alpha) // или он не принимает угол...
     {
-      //поворот робота
+      // поворот робота
     }
   }
 }
