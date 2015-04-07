@@ -7,7 +7,6 @@ namespace RobotDevelopment
     		var server = new CvarcClient(args, Settings).GetServer<PositionSensorsData>();
 		var helloPackageAns = server.Run();
     		var mainloop = true;
-    		Robot robot = new Robot();
     		while (mainloop)// робот работает в "вечном" цикле
     		{
       			Graph map = new Graph();// создаётся карта - каждый раз по новой, запихивается в граф
@@ -16,19 +15,19 @@ namespace RobotDevelopment
       			// З.Ы. надо обходить препятствия...
       			// З.З.Ы. по идее, надо делать это эффективно...
       			double alpha = ...;
-      			robot.Rotate(alpha);
-      			robot.Go();
+      			Rotate(angle, server);
+      			Go(server)
       			// mainloop становится false, когда на карте нет необходимого объекта
     		}
     		server.Exit()
   	}
   	
-  	public static void Go()
+  	public static void Go(server)
   	{
   		sensorsData = server.SendCommand(new Command { LinearVelocity = 50, Time = 1 });
   	}
   	
-  	public static Rotate(angle)
+  	public static Rotate(angle, server)
   	{
   		sensorsData = server.SendCommand(new Command { AngularVelocity = Angle.FromGrad(angle), Time = 1 });
   	}
