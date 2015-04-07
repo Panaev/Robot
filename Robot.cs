@@ -4,6 +4,7 @@ namespace RobotDevelopment
   {
     public Pos { get { return Position; } } // как это пишется, поправьте меня
     public DetailsInfo { get { return DetailsInfo; } } // и это тоже...
+    public Direction { get { return ... } } // направление
     
     public Go()
     {
