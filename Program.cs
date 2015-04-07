@@ -6,6 +6,9 @@ namespace RobotDevelopment
   	{
     		var server = new CvarcClient(args, Settings).GetServer<PositionSensorsData>();
 		var helloPackageAns = server.Run();
+		sensorsData = server.SendCommand(new Command { LinearVelocity = 10, Time = 1 });
+		sensorsData = server.SendCommand(new Command { AngularVelocity = Angle.FromGrad(-90), Time = 1 });
+		sensorsData = server.SendCommand(new Command { LinearVelocity = 10, Time = 1 });
     		var mainloop = true;
     		while (mainloop)// робот работает в "вечном" цикле
     		{
