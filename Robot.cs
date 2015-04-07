@@ -3,8 +3,8 @@ namespace RobotDevelopment
   public class Robot
   {
     public Pos { get { return Position; } } // как это пишется, поправьте меня
+    // Position возвращает координаты и угол робота
     public DetailsInfo { get { return DetailsInfo; } } // и это тоже...
-    public Direction { get { return ... } } // направление
     
     public Go()
     {
