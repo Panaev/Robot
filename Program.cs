@@ -22,5 +22,15 @@ namespace RobotDevelopment
     		}
     		server.Exit()
   	}
+  	
+  	public static void Go()
+  	{
+  		sensorsData = server.SendCommand(new Command { LinearVelocity = 50, Time = 1 });
+  	}
+  	
+  	public static Rotate(angle)
+  	{
+  		sensorsData = server.SendCommand(new Command { AngularVelocity = Angle.FromGrad(angle), Time = 1 });
+  	}
   }
 }
